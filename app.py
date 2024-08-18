@@ -164,8 +164,8 @@ if audio_file is not None:
 
     st.write("Transcribing the audio...")
     transcription = transcribe_audio(converted_audio_path)
-    st.write("**Transcription:**")
-    st.text_area("Transcription", transcription, height=200)
+    # st.write("**Transcription:**")
+    # st.text_area("Transcription", transcription, height=200)
 
     file_name = os.path.splitext(os.path.basename(audio_file.name))[0]
     patient_id = file_name
