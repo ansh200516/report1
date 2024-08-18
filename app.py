@@ -4,8 +4,9 @@ import pandas as pd
 import openai
 import io
 import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 MODEL = "gpt-4o"
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI()
 
 def convert_audio(input_file_path, output_file_path):
     audio = AudioSegment.from_file(input_file_path, format="m4a")
